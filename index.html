@@ -57,11 +57,11 @@
     <!-- content -->
     <main>
         <!-- Welcome -->
-        <div data-visible="false" class="welcome-items"> 
+        <div data-visible="true" class="welcome-items"> 
             <div class="floating-comments welcome-comment"> 
                 <i class="fa-regular fa-circle fa-sm"></i>
                 <p>I'm a Computer Science student based in
-                Salt Lake City, Utah. I love building beautiful interfaces and apps that solve real world problems and strive to fuel my need to learn!
+                Salt Lake City, Utah. I love building beautiful interfaces and apps that solve real world problems!
                 </p>
             </div>
     
@@ -76,7 +76,7 @@
         </div>
 
         <!-- Code -->
-        <div data-visible="true" class="code-items">
+        <div data-visible="false" class="code-items">
             <div  class="floating-comments code-comment"> 
                 <i class="fa-regular fa-circle fa-sm"></i>
                 <p>
@@ -88,26 +88,31 @@
                 
                 <div class="media mood-navigation">
                     <h3>Mood Memo, 2023</h3>
+                    <div class="overlay"></div>
                     <p class="media-desc">
                         Mood Memo is a a mood tracker and journaling app created in Xcode with SwiftUI
                     </p>
                     <img src="assets/moodMemo/moodMemo1.jpg"/>
                 </div>
 
-                <div class="media mood-navigation">
+                <!-- game-navigation -->
+                <div class="media game-navigation">
+                    <h3>Game Jams, 2022</h3>
+                    <div class="overlay"></div>
+                    <p class="media-desc">
+                        Game projects completed in 48 hours as part of Game Jams hosted by the University of Utah GameCraft club.
+                    </p>
+                    <img src="assets/itchIO/JZbIlu.jpg"/>
+                </div>
+
+                <!-- portfolio-navigation -->
+                <div class="media portfolio-navigation">
                     <h3>Portfolio, 2023</h3>
+                    <div class="overlay"></div>
                     <p class="media-desc">
                         Personal portfolio website created through Visual Studio Code in HTML, CSS and Javascript
                     </p>
                     <img src="assets/webPortfolio/particleArc2.jpg"/>
-                </div>
-
-                <div class="media mood-navigation">
-                    <h3>Game Jams, 2022</h3>
-                    <p class="media-desc">
-                        Game projects completed in 48 hours as part of Game Jams hosted by the University of Utah GameCraft club.
-                    </p>
-                    <img class="mood-navigation" src="assets/itchIO/JZbIlu.jpg"/>
                 </div>
 
                 <!-- Add more than 4 divs to get scroll behavior -->
@@ -118,13 +123,6 @@
 
         <!-- Code Mood Memo -->
         <div data-visible="false" class="code-mood-items">
-
-            <div  class="floating-comments code-mood-comment"> 
-                <i class="fa-regular fa-circle fa-sm"></i>
-                <p>
-                    Utilizing digital technologies all my life, I love tinkering with all sorts of unique programs. Aside from studying Computer Science at College, I also seek to create cool apps on my own time.
-                </p>
-            </div>
 
             <div class="media-scroller-mood">
                 <div class="project">
@@ -167,9 +165,131 @@
                         This app is a work in progress, with frameworks for mood editing and default view switching still being built. Sticking with the idea that dedicated memo and mood editing views will enhance interface navigation, I plan to implement those as well.
                     </p>
                 </div>
-                
+            </div>
+        </div>
 
-                
+        <!-- Code Game: code-game-items -->
+
+        <div data-visible="false" class="code-game-items">
+
+            <div class="floating-comments code-game-comment">
+                <a href="https://iotaai.itch.io/" target="_blank">
+                    <i class="fa-regular fa-circle fa-sm"></i>
+                    Itch.io
+                </a>
+            </div>
+
+            <div class="media-scroller-game">
+                <div class="project">
+
+                    <div class="media">
+                        <img src="assets/itchIO/JZbIlu.jpg"/>
+                    </div>
+                    
+                    <p class="project-title">
+                        48 Hour Game Jams
+                    </p>
+                    
+                    <p class="project-body">
+                        <i class="fa-regular fa-circle fa-sm"></i>
+                        These are the games I worked on for University of Utah GameCraft club's game jams. As the lead artist, I gained proficiency in Unity and 2D sprite integration.
+                    </p>
+
+                    <a href="https://waffleworks.itch.io/getting-it-together" target="_blank">
+                        <div class=".project-media">
+                            <img src="assets/itchIO/gameImg1.png"/>
+                        </div>
+                    </a>
+                    
+
+                    <p class="project-body">
+                        <i class="fa-regular fa-circle fa-sm"></i>
+                        "Getting it Together": My first game jam experience, a challenging yet enjoyable platformer where you help a robot escape a factory.
+                    </p>
+
+                    <a href="https://sweetpotatomash.itch.io/rakka" target="_blank">
+                        <div class=".project-media">
+                            <img src="assets/itchIO/gameImg2.png"/>
+                        </div>
+                    </a>
+
+                    <p class="project-body">
+                        <i class="fa-regular fa-circle fa-sm"></i>
+                        "Rakka": A narrative-driven visual novel with elements of horror. I led the visual and narrative direction, resulting in a successfully completed project despite time constraints.
+                    </p>
+                    
+                    <a href="https://iotaai.itch.io/candy-reaper" target="_blank">
+                        <div class=".project-media">
+                            <img src="assets/itchIO/gameImg5.jpg"/>
+                        </div>
+                    </a>
+                    
+
+                    <p class="project-body">
+                        <i class="fa-regular fa-circle fa-sm"></i>
+                        "Candy Reaper": An experimental PvP game inspired by Smash Bros. We opted for a nuanced approach through team discussions. Victory goes to the player with the most collected candy, though we didn't quite finish all the mechanics.
+                    </p>
+                    
+                    <a href="https://iotaai.itch.io/christmas-communist-party" target="_blank">
+                        <div class=".project-media">
+                            <img src="assets/itchIO/gameImg4.png"/>
+                        </div>
+                    </a>
+                    
+
+                    <p class="project-body">
+                        <i class="fa-regular fa-circle fa-sm"></i>
+                        "CCP": A polished side-scrolling bullet hell shooter. Leading visual development and collaborating with engineers, we created an engaging game. Try to beat level 4 - even the development team couldn't reach level 5!
+                    </p>
+
+                    <a href="https://werignac.itch.io/cannibal-starfish" target="_blank">
+                        <div class=".project-media">
+                            <img src="assets/itchIO/gameImg3.png"/>
+                        </div>
+                    </a>
+
+                    <p class="project-body">
+                        <i class="fa-regular fa-circle fa-sm"></i>
+                        "Cannibal Starfish": Influenced by the theme "Be There in Five," this game challenged me to integrate mesh mechanics and softbody physics for a cohesive visual experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code Portfolio: code-portfolio-items -->
+
+        <div data-visible="false" class="code-portfolio-items">
+            <div class="media-scroller-portfolio">
+                <div class="project">
+                    <div class="media">
+                        <img src="assets/webPortfolio/particleArc.png"/>
+                    </div>
+                    
+                    <p class="project-title">
+                        Website Portfolio
+                    </p>
+                    
+                    <p class="project-body">
+                        <i class="fa-regular fa-circle fa-sm"></i>
+                        I crafted this website using Visual Studio Code, employing HTML, CSS, and Javascript. Having prior experience with platforms like WordPress and Adobe Portfolio, I discovered coding a website to be more liberating and expressive.
+                    </p>
+
+                    <p class="project-body">
+                        <i class="fa-regular fa-circle fa-sm"></i>
+                        While not overly intricate, I aimed for a clean and minimalist design, drawing inspiration from Keita Yamada's work with some personal tweaks.
+                    </p>
+
+                    <p class="project-body">
+                        <i class="fa-regular fa-circle fa-sm"></i>
+                        A highlight was implementing Javascript, particularly creating a dynamic floating effect responsive to mouse movements.
+                    </p>
+
+                    <p class="project-body">
+                        <i class="fa-regular fa-circle fa-sm"></i>
+                        Delving into particle art and Javascript-based art was enthralling, as it's entirely founded on mathematical principles.
+                    </p>
+
+                </div>
             </div>
 
         </div>
@@ -185,56 +305,63 @@
 
             <div class="media-scroller-art snaps-inline-art">
 
-                <div class="media-art">
-                    <h3>Capstone, 2023</h3>
+                <a class="media-art" href="https://koubai.art/illustrations/" target="_blank">
+                        <h3>Capstone, 2023</h3>
+                        <div class="overlay"></div>
+                        <p class="media-desc">Splash page Illustrations a capstone project in illustration.</p>
+                        <img src="assets/illu/capstone/Illustration10678678.jpeg">
+                </a>
 
-                    <p class="media-desc">Splash page illustrations for my Senior Capstone Project in Illustration</p>
-                    <img src="assets/illu/capstone/Illustration10678678.jpeg">
-                </div>
-                <div class="media-art">
+                <a class="media-art" href="https://koubai.art/illustrations/" target="_blank">
+                    <div class="overlay"></div>
                     <img src="assets/illu/capstone/Illustration19.jpeg"/>
-                </div>
+                </a>
 
-                <div class="media-art">
-                    <img src="assets/illu/capstone/Illustration10678678.jpeg">
-                </div>
-                <div class="media-art">
+                <a class="media-art" href="https://koubai.art/illustrations/" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="assets/illu/illustration15 copy.jpg">
+                </a>
+                <a class="media-art" href="https://koubai.art/illustrations/" target="_blank">
                     <h3>Fan Works, 2023</h3>
+                    <div class="overlay"></div>
+                    <p class="media-desc">Illustrations based on trending characters.</p>
+                    <img src="assets/illu/Illustration17.jpeg"/>
+                </a>
 
-                    <p class="media-desc">Splash page illustrations for my Senior Capstone Project in Illustration</p>
-                    <img src="assets/illu/capstone/Illustration19.jpeg"/>
-                </div>
-
-                <div class="media-art">
+                <a class="media-art" href="https://koubai.art/designs/" target="_blank">
                     <h3>CatchKing, 2022</h3>
+                    <div class="overlay"></div>
+                    <p class="media-desc">NFT series on the Solana Blockchain.</p>
+                    <img src="assets/illu/catchking/ckmecha2-1 copy.jpg">
+                </a>
+                <a class="media-art" href="https://koubai.art/designs/" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="assets/illu/catchking/catchking-scene-2 copy.jpg"/>
+                </a>
 
-                    <p class="media-desc">Splash page illustrations for my Senior Capstone Project in Illustration</p>
-                    <img src="assets/illu/capstone/Illustration10678678.jpeg">
-                </div>
-                <div class="media-art">
-                    <img src="assets/illu/capstone/Illustration19.jpeg"/>
-                </div>
+                <a class="media-art" href="https://koubai.art/concepts/" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="assets/illu/Screenshot 2023-09-25 at 8.33.21 PM.png">
+                </a>
+                <a class="media-art" href="https://koubai.art/concepts/" target="_blank">
+                    <h3>World Building, 2022</h3>
+                    <div class="overlay"></div>
+                    <p class="media-desc">World and character building project.</p>
+                    <img src="assets/illu/Screenshot 2023-09-25 at 8.33.09 PM.png"/>
+                </a>
 
-                <div class="media-art">
-                    <h3>World Building, 2023</h3>
-
-                    <p class="media-desc">Splash page illustrations for my Senior Capstone Project in Illustration</p>
-                    <img src="assets/illu/capstone/Illustration10678678.jpeg">
-                </div>
-                <div class="media-art">
-                    <img src="assets/illu/capstone/Illustration19.jpeg"/>
-                </div>
-
-                <div class="media-art">
+                <a class="media-art" href="https://koubai.art/live-2d/" target="_blank">
                     <h3>VTuber Designs, 2023</h3>
-
-                    <p class="media-desc">Splash page illustrations for my Senior Capstone Project in Illustration</p>
-                    <img src="assets/illu/capstone/Illustration10678678.jpeg">
-                </div>
-                <div class="media-art">
-                    <img src="assets/illu/capstone/Illustration19.jpeg"/>
-                </div>
-                
+                    <div class="overlay"></div>
+                    <p class="media-desc">
+                        Original Characters designed then rigged in Cubism 2D
+                    </p>
+                    <img src="assets/illu/capstone/Illustration309067.jpeg">
+                </a>
+                <a class="media-art" href="https://koubai.art/live-2d/" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="assets/illu/capstone/Screenshot 2023-09-25 at 8.01.54 PM.png"/>
+                </a>    
             </div>
 
         </div>
@@ -258,28 +385,28 @@
 
             <div class="about-links about-comment3">
     
-                <div class="floating-comments">
+                <div class="floating-comments clickable-link">
                     <a href="https://www.linkedin.com/in/logan-pu" target="_blank">
                         <i class="fa-regular fa-circle fa-sm"></i>
                         LinkedIn
                     </a>
                 </div>
     
-                <div class="floating-comments">
+                <div class="floating-comments clickable-link">
                     <a href="https://github.com/Logan256" target="_blank">
                         <i class="fa-regular fa-circle fa-sm"></i>
                         Github
                     </a>
                 </div>
     
-                <div class="floating-comments">
+                <div class="floating-comments clickable-link">
                     <a href="https://iotaai1.artstation.com/" target="_blank">
                         <i class="fa-regular fa-circle fa-sm"></i>
                         Artstation
                     </a>
                 </div>
     
-                <div class="floating-comments">
+                <div class="floating-comments clickable-link">
                     <a href="assets/Logan-Pu-Resume.pdf" target="_blank">
                         <i class="fa-regular fa-circle fa-sm"></i>
                         Resume

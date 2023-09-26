@@ -2,6 +2,7 @@ const welcome = document.querySelector('.welcome-comment');
 const welcome2 = document.querySelector('.welcome-comment2');
 const portrait1 = document.querySelector('.portrait');
 const code = document.querySelector('.code-comment');
+const game = document.querySelector('.code-game-comment');
 const art = document.querySelector('.art-comment');
 const about = document.querySelector('.about-comment');
 const about2 = document.querySelector('.about-comment2');
@@ -51,6 +52,7 @@ const floatWelcome =  new Float(welcome);
 const floatWelcome2 =  new Float(welcome2);
 const floatPortrait =  new Float(portrait1);
 const floatCode = new Float(code);
+const floatGame = new Float(game);
 const floatArt = new Float(art);
 const floatAbout = new Float(about);
 const floatAbout2 = new Float(about2);
@@ -70,6 +72,7 @@ window.addEventListener('mousemove', function(event){
     floatWelcome.mouseFloat(event.x, event.y, deltaX, deltaY, 1);
 
     floatCode.mouseFloat(event.x, event.y, deltaX, deltaY, 1);
+    floatGame.mouseFloat(event.x, event.y, deltaX, deltaY, 1);
     floatArt.mouseFloat(event.x, event.y, deltaX, deltaY, 1);
     floatAbout.mouseFloat(event.x, event.y, deltaX, deltaY, 1);
     floatAbout2.mouseFloat(event.x, event.y, deltaX, deltaY, 1);
