@@ -1,6 +1,6 @@
 const welcome = document.querySelector('.welcome-comment');
 const welcome2 = document.querySelector('.welcome-comment2');
-const portrait1 = document.querySelector('.portrait');
+// const portrait1 = document.querySelector('.portrait');
 const code = document.querySelector('.code-comment');
 const game = document.querySelector('.code-game-comment');
 const art = document.querySelector('.art-comment');
@@ -50,7 +50,7 @@ let prevY = null;
 
 const floatWelcome =  new Float(welcome);
 const floatWelcome2 =  new Float(welcome2);
-const floatPortrait =  new Float(portrait1);
+// const floatPortrait =  new Float(portrait1);
 const floatCode = new Float(code);
 const floatGame = new Float(game);
 const floatArt = new Float(art);
@@ -67,7 +67,7 @@ window.addEventListener('mousemove', function(event){
         var deltaY = currY - prevY;
     }
     
-    floatPortrait.mouseFloat(event.x, event.y, deltaX, deltaY, 0.3);
+    // floatPortrait.mouseFloat(event.x, event.y, deltaX, deltaY, 0.3);
     floatWelcome2.mouseFloat(event.x, event.y, deltaX, deltaY, 1);
     floatWelcome.mouseFloat(event.x, event.y, deltaX, deltaY, 1);
 
