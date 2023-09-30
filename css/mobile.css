@@ -7,20 +7,31 @@
     padding: 0 1vw;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
 
     html {
-        margin: 20px;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 6vw;
+    }
+
+    #canvas1 {
+        border: 2px solid black;
         width: 100%;
         height: 100%;
-        padding: 0px;
-        border: none;
-        font-size: 6vw;
+        z-index: -1;
     }
 
     h1 {
         font-size: 1.2em;
         margin-left: 0.5em;
+        margin-top: 1em;
     }
 
     h2 {
@@ -34,7 +45,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        font-size: 3em;
+        font-size: 2em;
         background-color: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(10px);
         padding: 50px;
@@ -48,15 +59,94 @@
         transform: translateY(0%);
     }
 
+    .navigation-item {
+        position:relative;
+        top: 50px;
+    }
+
+    .welcome-comment {
+        width: 18em;
+        left: 20%;
+        top: 30%;
+    }
+
+    .welcome-comment2 {
+        width: 20em;
+        left: 20%;
+        top: 50%;
+    }
+
+    .code-comment {
+        width: 20em;
+        left: 10%;
+        top: 15%;
+    }
+
+    .about-comment {
+        width: 20em;
+        left: 20%;
+        top: 30%;
+    }
+
+    .about-comment2 {
+        width: 20em;
+        left: 10%;
+        top: 50%;
+    }
+
+    .about-links {
+        width: 20em;
+        left: 60%;
+        top: 70%;
+    }
+
     li {
         padding: 5px;
     }
-    .navigation-icon {
-        padding-top: 2em;
+    #navigation-icon {
+        padding-top: 1em;
+        padding-left: 0.5em;
     }
 
     .nav-toggle {
         padding-top: 300px;
         z-index: 5;
+    }
+
+    .media-scroller {
+        width: calc(100% - 50px);
+        height: 60vh;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        grid-auto-rows: var(--_row-height);
+    }
+}
+
+/* tablet */
+@media (min-width: 600px) and (max-width: 1200px ) {
+    html {
+        font-size: 3vh;
+    }
+
+    .welcome-comment {
+        width: 40vw;
+    }
+    .welcome-comment2 {
+        width: 50vw;
+    }
+
+    .media-scroller {
+        top: 30%;
+    }
+
+    .about-comment2 {
+        top: 60%;
+    }
+
+    .about-links {
+        left: 20%;
+        top: 60%;
     }
 }

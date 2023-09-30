@@ -9,7 +9,7 @@ canvas.height = canvas.offsetHeight;
 let particleWave1 = []
 let particleWave2 = []
 
-const numberOfParticles = 1000;
+const numberOfParticles = 6000;
 
 const gradient1 = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
 gradient1.addColorStop(0, 'whitesmoke');

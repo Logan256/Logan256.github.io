@@ -1,4 +1,3 @@
-
 const navToggle = document.querySelector('.nav-toggle');
 const primaryNavigation = document.querySelector('.navigation-items');
 
@@ -28,140 +27,73 @@ const gameItems = document.querySelector('.code-game-items');
 const navItemPortfolio = document.querySelector('.portfolio-navigation');
 const portfolioItems = document.querySelector('.code-portfolio-items');
 
-const navItemArt = document.querySelector('.art-navigation');
-const artItems = document.querySelector('.art-items');
-
 const navItemAbout = document.querySelector('.about-navigation');
 const aboutItems = document.querySelector('.about-items');
 
-const artScroll = document.querySelector('.media-scroller-art');
 const codeScroll = document.querySelector('.media-scroller');
 const codeMoodScroll = document.querySelector('.media-scroller-mood');
 const codeGameScroll = document.querySelector('.media-scroller-game');
 const codePortfolioScroll = document.querySelector('.media-scroller-portfolio');
 
+
+const items = [welcomeItems, codeItems, moodItems, gameItems, portfolioItems, aboutItems];
+
+const scrolls = [codeScroll, codeMoodScroll, codeGameScroll, codePortfolioScroll];
+
+function hide(exception) {
+    items.forEach(element => {
+        if (element === exception) {
+            element.setAttribute('data-visible', "true");
+        } else {
+            element.setAttribute('data-visible', "false");
+        }
+    });
+}
+
+function moveScroll(exception) {
+    scrolls.forEach(element => {
+        if (element === exception) {
+            element.style.right = '100px';
+        } else {
+            element.style.right = '-300px';
+        }
+    })
+}
+
 /* Welcome Items Show */
 navItemWelcome.addEventListener('click', () => {
-    const visibility = welcomeItems.getAttribute('data-visible');
-    welcomeItems.setAttribute('data-visible', "true");
-
-    codeItems.setAttribute('data-visible', "false");
-    artItems.setAttribute('data-visible', "false");
-    aboutItems.setAttribute('data-visible', "false");
-    moodItems.setAttribute('data-visible', "false");
-
+    hide(welcomeItems);
+    moveScroll(null);
     headerTitle.textContent = 'Hello, I\'m Logan';
 });
 
-
 /* Code Items Show */
 navItemCode.addEventListener('click', () => {
-    const visibility = codeItems.getAttribute('data-visible');
-    codeItems.setAttribute('data-visible', "true");
-
-    welcomeItems.setAttribute('data-visible', "false");
-    artItems.setAttribute('data-visible', "false");
-    aboutItems.setAttribute('data-visible', "false");
-    moodItems.setAttribute('data-visible', "false");
-    gameItems.setAttribute('data-visible', "false");
-    portfolioItems.setAttribute('data-visible', "false");
-
-    // so scroll areas don't overlap
-    codeScroll.style.right = '100px';
-    artScroll.style.right = '-300px';
-    codeMoodScroll.style.right = '-300px';
-    codeGameScroll.style.right = '-300px';
-    codePortfolioScroll.style.right = '-300px';
-
+    hide(codeItems);
+    moveScroll(codeScroll);
     headerTitle.textContent = 'Software Projects';
 });
 
-/* Code Mood Items Show */
-navItemMood.addEventListener('click', function() {
-    const visibility = moodItems.getAttribute('data-visible');
-    moodItems.setAttribute('data-visible', "true");
-    console.log("true");
-
-    codeItems.setAttribute('data-visible', "false");
-
-    // so scroll areas don't overlap
-    codeMoodScroll.style.right = '100px';
-    codeScroll.style.right = '-300px';
-    artScroll.style.right = '-300px';
-    codeGameScroll.style.right = '-300px';
-
+navItemMood.addEventListener('click', () => {
+    hide(moodItems);
+    moveScroll(codeMoodScroll);
     headerTitle.textContent = 'Mood Memo Project';
 })
 
-/* Game Items Show */
 navItemGame.addEventListener('click', () => {
-    const visibility = gameItems.getAttribute('data-visible');
-    gameItems.setAttribute('data-visible', "true");
-    console.log("true");
+    hide(gameItems);
+    moveScroll(codeGameScroll);
+    headerTitle.textContent = 'Itch.io Projects';
+})
 
-    codeItems.setAttribute('data-visible', "false");
-    moodItems.setAttribute('data-visible', "false");
-    portfolioItems.setAttribute('data-visible', "false");
-
-    // so scroll areas don't overlap
-    codeGameScroll.style.right = '100px';
-    codeScroll.style.right = '-300px';
-    artScroll.style.right = '-300px';
-
-    headerTitle.textContent = 'Mood Memo Project';
-});
-
-/* Portfolio Items Show */
 navItemPortfolio.addEventListener('click', () => {
-    const visibility = portfolioItems.getAttribute('data-visible');
-    portfolioItems.setAttribute('data-visible', "true");
-    console.log("true");
-
-    codeItems.setAttribute('data-visible', "false");
-    moodItems.setAttribute('data-visible', "false");
-    gameItems.setAttribute('data-visible', "false");
-
-    // so scroll areas don't overlap
-    codePortfolioScroll.style.right = '100px';
-    codeScroll.style.right = '-300px';
-    artScroll.style.right = '-300px';
-
-    headerTitle.textContent = 'Mood Memo Project';
-});
-
-
-/* Art Items Show */
-navItemArt.addEventListener('click', () => {
-    const visibility = artItems.getAttribute('data-visible');
-    artItems.setAttribute('data-visible', "true");
-
-    welcomeItems.setAttribute('data-visible', "false");
-    codeItems.setAttribute('data-visible', "false");
-    aboutItems.setAttribute('data-visible', "false");
-    moodItems.setAttribute('data-visible', "false");
-    gameItems.setAttribute('data-visible', "false");
-    portfolioItems.setAttribute('data-visible', "false");
-
-    // so scroll areas don't overlap
-    artScroll.style.right = '100px';
-    codeScroll.style.right = '-300px';
-    codeMoodScroll.style.right = '-300px';
-    
-    headerTitle.textContent = 'Illustrations';
-});
-
-/* About Items Show */
+    hide(portfolioItems);
+    moveScroll(codePortfolioScroll);
+    headerTitle.textContent = 'This Website';
+})
 
 navItemAbout.addEventListener('click', () => {
-    const visibility = aboutItems.getAttribute('data-visible');
-    aboutItems.setAttribute('data-visible', "true");
-
-    welcomeItems.setAttribute('data-visible', "false");
-    codeItems.setAttribute('data-visible', "false");
-    artItems.setAttribute('data-visible', "false");
-    moodItems.setAttribute('data-visible', "false");
-    gameItems.setAttribute('data-visible', "false");
-    portfolioItems.setAttribute('data-visible', "false");
-
+    hide(aboutItems);
+    moveScroll(null);
     headerTitle.textContent = 'My Links and Resume';
-});
+})
